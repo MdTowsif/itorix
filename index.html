@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Journal with Weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide-react@latest/umd/lucide-react.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+        
+    
+</head>
+<body class="bg-gradient-to-br from-purple-400 to-pink-500 min-h-screen flex flex-col items-center justify-start pt-8 overflow-x-hidden">
+    <div class="container max-w-2xl w-full px-4">
+        <div class="text-center mb-6">
+            <h1 class="text-3xl font-semibold text-white">Mood Journal</h1>
+            <p id="currentDate" class="text-sm text-gray-200 mt-1"></p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 shadow-lg mb-6 border border-white/20">
+            <h2 class="text-lg font-semibold text-white mb-4">How are you feeling today?</h2>
+            <div class="flex items-center justify-around mb-4">
+                <button data-mood="😊" class="mood-icon">😊</button>
+                <button data-mood="😃" class="mood-icon">😃</button>
+                <button data-mood="😐" class="mood-icon">😐</button>
+                <button data-mood="😞" class="mood-icon">😞</button>
+                <button data-mood="😡" class="mood-icon">😡</button>
+            </div>
+            <textarea id="noteInput" placeholder="Add a note..." class="w-full rounded-md p-3 text-sm bg-black/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-purple-400 resize-none h-24"></textarea>
+            <div class="flex items-center gap-4 mt-4">
+                <button id="saveNote" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-2.5 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 w-full sm:w-auto">Save</button>
+                <button id="viewCalendar" class="bg-white/20 text-white font-semibold py-2.5 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 w-full sm:w-auto">View Calendar</button>
+            </div>
+        </div>
+
+        <div id="calendarView" class="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 shadow-lg mb-6 border border-white/20 hidden">
+            <h2 class="text-lg font-semibold text-white mb-4">Calendar</h2>
+            <div class="calendar">
+                <div class="calendar-header">Sun</div>
+                <div class="calendar-header">Mon</div>
+                <div class="calendar-header">Tue</div>
+                <div class="calendar-header">Wed</div>
+                <div class="calendar-header">Thu</div>
+                <div class="calendar-header">Fri</div>
+                <div class="calendar-header">Sat</div>
+            </div>
+            <div class="mt-4 flex justify-center">
+                <button id="closeCalendar" class="bg-white/20 text-white font-semibold py-2.5 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 w-full sm:w-auto">Close Calendar</button>
+            </div>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 shadow-lg border border-white/20">
+            <h2 class="text-lg font-semibold text-white mb-4">All Notes</h2>
+            <div id="notesContainer" class="space-y-4">
+            </div>
+        </div>
+    </div>
+
+    <script src="ts.js"></script>
+
+
+    
+</body>
+</html>
+
+

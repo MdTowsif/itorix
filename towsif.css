@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #87CEFA;
+    text-align: center;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+.mood {
+    font-size: 24px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#mood-options button {
+    border: none;
+    background: none;
+}
+
+#note {
+    width: 80%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+button#save {
+    margin-top: 10px;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#notes-list {
+    list-style: none;
+    padding: 0;
+}
